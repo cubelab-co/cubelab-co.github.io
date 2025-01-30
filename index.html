@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Audiowide");
+
+    canvas {
+       position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    :root {
+      --dark-bg: rgba(15, 15, 15, 0.95);
+      --spacing: 50px;
+
+      font-family: 'Audiowide', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+    main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+/*   margin: 0px auto;
+  padding: 120px 0px; */
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+    }
+  
+
+    h1,
+    h2,
+    h3,
+    blockquote {
+      font-family: 'Audiowide', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    header {
+      background: transparent;
+      grid-column: 2 / span 5;
+      font-size: 3rem;
+      font-family: 'Audiowide', sans-serif;
+    }
+    a{
+      background: linear-gradient(to right, #ADD8E6,#0096FF);
+      font-family: 'Audiowide', sans-serif;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 1.5rem;
+    }
+
+    section {
+      grid-column: 2 / 10;
+      padding: 1rem;
+      color: #334352 ;
+      backdrop-filter: blur(14px);
+      background-color: rgba(255, 255, 255, 0.2);
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: var(--spacing);
+      font-size: 1.5rem;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      grid-column: 2 / span 9;
+      margin-bottom: var(--spacing);
+
+
+    }
+
+    .g-t {
+      background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+
+    blockquote p {
+      color: black;
+      background-color: white;
+      font-size: 4rem;
+      display: inline;
+      line-height: 1;
+      background: rgb(9, 9, 121);
+      background: linear-gradient(90deg, rgba(9, 9, 121, 1) 26%, rgba(0, 212, 255, 1) 70%);
+    }
+
+    .left {
+      grid-column: 4 / 12;
+/*       background: linear-gradient(to right, #cfcfe8,#a1a1ce,#7474b0); 
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; */
+    } 
+
+    img {
+      grid-column: 2 / 8;
+      max-width: 100%;
+      height: 20rem;
+      margin-bottom: var(--spacing);
+    }
+    .leftimg{
+      grid-column: 6 / 12;
+      padding: 1rem;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: var(--spacing);
+    }
+@media only screen and (max-width: 576px) { /* Adjust breakpoint as needed */
+  main {
+  padding: 0px 0px;
+    }
+  header {
+    padding: 1rem;
+    font-size: 2rem;
+    grid-column: 1 / 12; /* Override for specific divs */
+  }
+  
+  section,
+  blockquote,
+  img,
+  .left,
+  .leftimg {
+    margin-bottom: 50px;
+    grid-column: 1 / 12; /* Override for specific divs */
+  }
+  
+}
+    
+}
+  </style>
+   <link rel="shortcut icon" type="image/svg+xml" href="2pw61DS9iGogDyc6Yw7AK7ktE0Y.svg">
+  <title>Suloware</title>
+
+</head>
+
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <main>
+
+    <header>
+      <h1> <img src="2pw61DS9iGogDyc6Yw7AK7ktE0Y.svg"> Suloware</h1>
+    </header>
+
+
+    <section>
+      <h2>📜 Manifesto</h2>
+      <p>SuloWare is a comprehensive IT solutions provider, dedicated to empowering businesses with innovative technology. Our diverse range of services caters to a wide spectrum of industries, including hospitality, retail, and automotive. We specialize in:
+      </p> <p> <h4> Website Development:</h4> Crafting visually appealing and user-friendly websites that effectively showcase your brand and drive online growth.</p>
+<p> <h4> iT Consulting:</h4> Providing expert advice and strategic guidance to optimize your IT infrastructure, enhance security, and boost productivity.</p>
+      <img src="blendBoard.png">
+<p> <h4> Automotive Software:</h4> Developing cutting-edge software solutions to streamline automotive operations, from inventory management to customer service.</p>
+<p>Hotel Management Systems: Implementing robust hotel management systems to streamline operations, improve guest experience, and maximize revenue.</p>
+<p> <h4>Point of Sale (POS) Systems:</h4> Offering efficient POS solutions to optimize sales processes, track inventory, and generate valuable business insights.</p>
+<p> <h4>Software Development and ERP Solutions:</h4> Tailoring software solutions and Enterprise Resource Planning systems to meet specific business needs, improving efficiency and decision-making.
+With a commitment to excellence and customer satisfaction, SuloWare delivers innovative IT solutions that drive business success.</p>
+</p> </section>
+
+    
+       <section class="left">
+        
+سولوير هي شركة متخصصة في تقديم حلول تكنولوجيا المعلومات الشاملة، ملتزمة بتمكين الشركات من خلال التقنيات المبتكرة. تغطي مجموعة خدماتنا المتنوعة مجموعة واسعة من الصناعات، بما في ذلك الضيافة والتجزئة والسيارات. نحن متخصصون في:<p>
+تطوير مواقع الويب: صياغة مواقع ويب جذابة بصريًا وسهلة الاستخدام تعرض علامتك التجارية بشكل فعال وتعزز النمو عبر الإنترنت.<p></p>
+الاستشارات التقنية: تقديم المشورة والارشاد الاستراتيجي لتحسين البنية التحتية لتكنولوجيا المعلومات، وتعزيز الأمن، وزيادة الإنتاجية.<p> </p>
+برمجيات السيارات: تطوير حلول برمجية متطورة لترشيد العمليات السيارات، من إدارة المخزون إلى خدمة العملاء.<p></p>
+          <img src="DALL·E 2024-2.webp">
+نظم إدارة الفنادق: تنفيذ أنظمة إدارة فنادق قوية لترشيد العمليات، وتحسين تجربة الضيوف، وتعظيم الإيرادات.<p>  </p>
+ تقديم حلول نقاط البيع: الفعالة لتحسين عمليات البيع وتتبع المخزون وتوليد رؤى تجارية قيمة. نظم نقاط البيع (POS)<p> </p>
+ تصميم حلول برمجية وأنظمة تخطيط موارد المؤسسة:  لتلبية الاحتياجات التجارية المحددة، وتحسين الكفاءة واتخاذ القرارات طوير البرمجيات وحلول تخطيط موارد المؤسسة (ERP):<p></p>
+</p> مع التزامنا بالتميز ورضا العملاء، توفر سولوير حلول تكنولوجيا المعلومات المبتكرة التي تدفع النجاح التجاري.
+
+ 
+    </section> 
+    <section>
+      <P>
+        
+Suloware is your ultimate partner in leveraging the power of Artificial Intelligence to revolutionize your business productivity. Our cutting-edge AI services are designed to streamline operations,
+        enhance decision-making, and unlock new levels of efficiency for your company. Whether you're looking to automate repetitive tasks, gain actionable insights from big data, or improve customer experiences,
+        Suloware provides tailor-made solutions to meet your specific needs.
+
+With a team of AI experts and a deep understanding of modern business challenges, we offer services like predictive analytics, natural language processing, intelligent automation, and customized AI tools.
+        Our mission is to empower businesses to stay ahead in a competitive market by integrating innovative technology into their workflows seamlessly. 
+        At Suloware, we don’t just provide AI solutions; we deliver measurable results that drive growth and success for your organization.</P>
+      <P>
+        سولوير هي شريكك المثالي لاستغلال قوة الذكاء الاصطناعي لإحداث ثورة في إنتاجية أعمالك. نحن نقدم خدمات ذكاء اصطناعي متطورة مصممة لتبسيط العمليات،
+        وتعزيز اتخاذ القرارات، وفتح آفاق جديدة من الكفاءة لشركتك. سواء كنت تسعى لأتمتة المهام المتكررة، أو استخراج رؤى قابلة للتنفيذ من البيانات الضخمة، أو تحسين تجارب العملاء، فإن سولوير تقدم حلولًا مصممة خصيصًا لتلبية احتياجاتك.
+
+بفضل فريق من خبراء الذكاء الاصطناعي وفهم عميق لتحديات الأعمال الحديثة، نقدم خدمات مثل التحليلات التنبؤية، ومعالجة اللغة الطبيعية، والأتمتة الذكية،
+        وأدوات الذكاء الاصطناعي المخصصة. رسالتنا هي تمكين الشركات من التقدم في سوق تنافسية من خلال دمج التكنولوجيا المبتكرة في سير العمل بسلاسة. في سولوير، لا نقدم حلول ذكاء اصطناعي فحسب، بل نقدم نتائج قابلة للقياس تدفع نمو ونجاح مؤسستك. 
+      </P>
+    </section>
+    
+
+    <section class="light"  >
+      <h2> 💻 Projects</h2>
+
+      <p>  <br> <a href="https://github.com/mohamedbadrco/photo-hash">Photo Hash</a>  Fultter, Dart 
+Application using Flutter and Dart that generates ASCII art representations of images User uploads an image
+or selects one from the device. The application processes the image and converts it into ASCII art format.
+Users can customize the level of detail ,colors and style in the generated art that work on android ,Linux and
+web.
+        
+<br> <a href="https://github.com/mohamedbadrco/goim">G Hash</a> go-lang
+Conceptualized and developed a NFT project using Golang that generates unique, code-driven ASCII art
+GIFs. This project merges the artistic realm of ASCII art with the innovative world of NFTs. I leveraged
+Golang's powerful capabilities for generating dynamic ASCII art to create a collection of programmatically
+produced, animated NFTs.
+        
+<br> <a href="https://github.com/mohamedbadrco/twebot">Twitter-bot</a>  python 
+Developed and deployed a Twitter bot using Python, Tweepy this bot leverages my skills in automation and
+social media to increase brand awareness, provide valuable content to followers, foster community engagement
+
+ <br> <a href="https://mohamedbadrco.github.io/">Portfolio page</a>  HTML, CSS, JavaScript 
+Leveraging the power of HTML, CSS, and JavaScript, I've crafted a dynamic 3D portfolio website that
+showcases my professional journey. This interactive experience presents my skills, experience, and projects in
+a visually engaging format, making a lasting impression on potential employers.
+
+
+    </section>
+
+
+
+    <blockquote>
+      <p>The best way out is always through <br>-Robert Frost</p>
+    </blockquote>
+
+    <section class="left">
+      <h2> 📎 Contact Us</h2>
+      <P>suloware@gmail.com</P>
+      <p> +96897272069 </p>
+      <p> location: Muscat, seeb </p>
+
+
+    </section>
+
+
+
+  </main>
+  <script src="math.js" type="text/javascript"></script>
+  <script type="module">
+    
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js';
+    import { BufferGeometryUtils } from 'https://cdn.jsdelivr.net/npm/three@0.125.2/examples/jsm/utils/BufferGeometryUtils.js';
+    
+
+    //Setup
+    const scene = new THREE.Scene();
+    // scene.background = new THREE.Color( 0x000000 );
+    scene.background = new THREE.Color( 0x87CEEB );
+    // const geo = new BufferGeometryUtils.Geometry();
+    // const geo = new THREE.BufferGeometry();
+    // const tuft1 = new THREE.SphereGeometry(1.5,7,8);
+    // tuft1.translate(-2,0,0);
+    // geo.merge(tuft1);
+  //  const geo = new THREE.BufferGeometry()
+
+    
+
+
+    // const geomA = BufferGeometryUtils.mergeBufferGeometries([tuft1, tuft2, tuft3], false);
+    // const positionAttribute = geomA.getAttribute( 'position' );
+    // console.log(THREE.MathUtils.randFloatSpread(2)*2);
+    // const vertex = new THREE.Vector3();
+
+    
+    
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.querySelector('#bg'),
+    });
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.position.setZ(30);
+    camera.position.setX(-3);
+
+    renderer.render(scene, camera);
+
+    var material_b = new THREE.ShaderMaterial({
+      uniforms: {
+        color1: {
+          value: new THREE.Color("red")
+        },
+        color2: {
+          value: new THREE.Color("blue")
+        }
+      },
+      vertexShader: `
+    varying vec2 vUv;
+
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+    }
+  `,
+      fragmentShader: `
+    uniform vec3 color1;
+    uniform vec3 color2;
+  
+    varying vec2 vUv;
+    
+    void main() {
+      
+      gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
+    }
+  `,
+      wireframe: true
+    });
+    
+     var material_p = new THREE.ShaderMaterial({
+      uniforms: {
+        color1: {
+          value: new THREE.Color("red")
+        },
+        color2: {
+          value: new THREE.Color("purple")
+        }
+      },
+      vertexShader: `
+    varying vec2 vUv;
+
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+    }
+  `,
+      fragmentShader: `
+    uniform vec3 color1;
+    uniform vec3 color2;
+  
+    varying vec2 vUv;
+    
+    void main() {
+      
+      gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
+    }
+  `,
+      wireframe: true
+    });
+
+    // Torus
+
+    const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+    // Function to generate random noise
+// function generateNoise(amplitude) {
+//   return Math.random() * amplitude - amplitude / 2;
+// }
+
+// Access vertices and apply noise
+// const vertices = geometry.attributes.position.array;
+// const lenv = vertices.length
+// for (let i = 0; i < lenv; i += 3) {
+//  // const vertex = vertices[i];
+//   if ((Math.random()/2) > Math.random() ){
+//   vertices[i] += Math.random() * 2.5;
+//   vertices[i+1] += Math.random() * 2.5;
+//   vertices[i+2] += Math.random() * 2.5; 
+//     }
+// }
+
+// // Update geometry
+// geometry.attributes.position.needsUpdate = true;
+    const torus = new THREE.Mesh(geometry, material_p);
+
+    // scene.add(torus);
+
+    // Lights
+
+    const pointLight = new THREE.PointLight(0xffffff);
+    pointLight.position.set(5, 5, 5);
+    const light2 = new THREE.DirectionalLight( 0xff5566, 0.7 );
+    light2.position.set( 5, 5, 5 ).normalize();
+    scene.add( light2 );
+
+    const ambientLight = new THREE.AmbientLight(0xffffff);
+    scene.add(pointLight, ambientLight);
+    let clouds = [];
+    let derif = [];
+
+    function addStar() {
+      const base = THREE.MathUtils.randFloat(0.5,5)
+
+          const tuft1 = new THREE.SphereGeometry(THREE.MathUtils.randFloat(0.5,5),7*2,8*2)
+    tuft1.translate(-(base),0,0)
+    
+    
+    const tuft2 = new THREE.SphereGeometry(THREE.MathUtils.randFloat(0.5,5),7*2,8*2)
+    tuft2.translate(base,0,0)
+    
+    
+    const tuft3 = new THREE.SphereGeometry(base,7*2,8*2)
+    tuft3.translate(0,0,0)
+      // console.log(THREE.MathUtils.randFloat(0.5,3));
+      
+    const geomA = BufferGeometryUtils.mergeBufferGeometries([tuft1, tuft2, tuft3], false);
+    const positionAttribute = geomA.getAttribute( 'position' );
+    // console.log(THREE.MathUtils.randFloatSpread(2)*2);
+    const vertex = new THREE.Vector3();
+      
+      for ( let i = 0; i < positionAttribute.count; i ++ ) {
+      vertex.fromBufferAttribute( positionAttribute, i ); // read vertex
+      // do something with vertex
+      positionAttribute.setXYZ( i, vertex.x + (THREE.MathUtils.randFloatSpread(2) *0.2) , vertex.y + (THREE.MathUtils.randFloatSpread(2)*0.2) , vertex.z + (THREE.MathUtils.randFloatSpread(2)*0.2) ); // write coordinates back
+    }
+   //  let cloud
+
+   //    if ((THREE.MathUtils.randInt(0,100))%10 == 0 ){
+   //         cloud = new THREE.Mesh(geomA,material_b)
+   // } else { }
+         const  cloud = new THREE.Mesh(
+    geomA,
+    new THREE.MeshLambertMaterial({
+        color:'white',
+        flatShading:true,
+    }))
+      
+  
+
+      const [x, y, z] = Array(3)
+        .fill()
+        .map(() => THREE.MathUtils.randFloatSpread(100));
+
+      cloud.position.set(x, y, z);
+      clouds.push(cloud);
+      derif.push([THREE.MathUtils.randFloat(-0.01,0.01),THREE.MathUtils.randFloat(-0.01,0.01),THREE.MathUtils.randFloat(-0.01,0.01)]);
+      scene.add(cloud);
+    }
+     console.log(clouds);
+    Array(70).fill().forEach(addStar);
+
+
+    const box = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), material_b);
+
+    // scene.add(box);
+
+    box.position.z = -5;
+    box.position.x = 2;
+
+    // Scroll Animation
+
+    function moveCamera() {
+      const t = document.body.getBoundingClientRect().top;
+
+      camera.position.z = t * -0.002;
+      camera.position.x = t * -0.00005;
+      camera.rotation.y = t * -0.00005;
+      
+  // const scrollPosition = window.scrollY;
+  // const section = document.querySelector('.section');
+      
+  
+  // // Update background color of sections based on percentage
+  // section.style.backgroundColor = linear-gradient(to right, 
+  // `rgba(255, 255, 255, ${(100 - percentage) / 100})` #ADD8E6,
+  //   `rgba(255, 255, 255, ${(100 - percentage) / 100})` #0096FF); 
+     }
+
+    document.body.onscroll = moveCamera;
+    moveCamera();
+
+    // Animation Loop
+
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      for ( let i = 0; i < 70; i ++ ) { 
+        if (clouds[i].position.z > 50 || clouds[i].position.z < -50){
+        derif[i][0] = derif[i][0] * -1
+        
+      }
+      if (clouds[i].position.x > 50 || clouds[i].position.x < -50){
+        derif[i][1] = derif[i][1] * -1
+      }
+
+        clouds[i].position.z += derif[i][0]
+        clouds[i].position.x += derif[i][1] 
+        // clouds[i].position.y +=  derif[i][2]
+        
+      }
+
+      // torus.rotation.x += 0.01;
+      // torus.rotation.y += 0.005;
+      // torus.rotation.z += 0.01;
+      
+      box.rotation.x += 0.005;
+      box.rotation.y += 0.01;
+      box.rotation.z += 0.01;
+
+
+      // controls.update();
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+  </script>
+
+
+</body>
+
+</html>

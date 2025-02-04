@@ -31,23 +31,12 @@
             flex-direction: column; /* Necessary for height: 100% to work properly */
             min-height: 100vh; /* Ensure body takes up full viewport height */
             background: linear-gradient(to bottom, #e0eafc, #cfdef3);
-            animation: gradientShift 10s ease infinite; /* Apply animation */
 
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
     }
-      @keyframes gradientShift {
-            0% {
-                background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* Start gradient */
-            }
-            50% {
-                background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Middle gradient */
-            }
-            100% {
-                background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* Back to start */
-            }
-        }
+   
   
 
     h1,

@@ -174,7 +174,15 @@
 
 
     } 
-
+  .header-grid{
+    grid-column: 1 / 25;
+    margin: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-auto-flow: column;
+            place-content: center;
+    
+  }
     img {
       grid-column: 3 / 16;
       max-width: 100%;
@@ -224,6 +232,7 @@
     <header>
       <h1> <img src="Untitled (1) (1).png"> Cube Lab</h1>
     </header>
+  <div class="header-grid">
 
   <figure class="card1"  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
     <img src="DALL·E 2024-2.webp" alt="Mountains">
@@ -265,7 +274,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident
 </div>
-
+  </div>
     <section>
       <h2>📜 Manifesto</h2>
 

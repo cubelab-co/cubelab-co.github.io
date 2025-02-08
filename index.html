@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Audiowide");
@@ -20,23 +22,30 @@
 
 
     main {
-            margin: 0; /* Remove default body margins */
-            overflow: hidden; /* Prevent scrollbars if gradient is larger than viewport */
-            display: flex;
-            background-color: #e5e5f7;
-            opacity: 1;
-            background-image:  linear-gradient(30deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(150deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(30deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(150deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(60deg, #d9dbef77 25%, transparent 25.5%, transparent 75%, #d9dbef77 75%, #d9dbef77), linear-gradient(60deg, #d9dbef77 25%, transparent 25.5%, transparent 75%, #d9dbef77 75%, #d9dbef77);
-            background-size: 80px 140px;
-            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-  
-            display: grid;
-            grid-template-columns: repeat(25, 1fr);
+      margin: 0;
+      /* Remove default body margins */
+      overflow: hidden;
+      /* Prevent scrollbars if gradient is larger than viewport */
+      display: flex;
+      /* background-color: #e5e5f7;
+      opacity: 1;
+      background-image: linear-gradient(30deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(150deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(30deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(150deg, #d9dbef 12%, transparent 12.5%, transparent 87%, #d9dbef 87.5%, #d9dbef), linear-gradient(60deg, #d9dbef77 25%, transparent 25.5%, transparent 75%, #d9dbef77 75%, #d9dbef77), linear-gradient(60deg, #d9dbef77 25%, transparent 25.5%, transparent 75%, #d9dbef77 75%, #d9dbef77);
+      background-size: 80px 140px;
+      background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; */
+      position: absolute;
+      top: 0px;
+      z-index: 100;
+      background-color: #e5e5f700;
+
+      display: grid;
+      grid-template-columns: repeat(25, 1fr);
     }
+
     body {
       margin: 0;
     }
-   
-  
+
+
 
     h1,
     h2,
@@ -54,8 +63,26 @@
       font-size: 3rem;
       font-family: 'Audiowide', sans-serif;
     }
-    a{
-      background: linear-gradient(to right, #ADD8E6,#0096FF);
+
+    a {
+      background: linear-gradient(to right, #ADD8E6, #0096FF);
+      font-family: 'Audiowide', sans-serif;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 1.5rem;
+    }
+
+    .wa {
+      background: linear-gradient(to right, #25D366, #eee);
+      font-family: 'Audiowide', sans-serif;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 1.5rem;
+    }
+
+
+    .gm {
+      background: linear-gradient(to right, #ff0000, #eee);
       font-family: 'Audiowide', sans-serif;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
@@ -64,15 +91,17 @@
 
     section {
       grid-column: 3 / 22;
+      border-radius: 8px;
+
       padding: 1rem;
-      color: #334352 ;
+      color: #ffffff;
       backdrop-filter: blur(14px);
       background-color: rgba(255, 255, 255, 0.2);
       font-size: 1.25rem;
       line-height: 1.5;
       margin-bottom: var(--spacing);
       font-size: 1.5rem;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.2), 0 -10px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 -10px 20px rgba(0, 0, 0, 0.4);
 
     }
 
@@ -85,79 +114,105 @@
 
     }
 
+    #gradient-canvas {
+      height: 1000vh;
+      width: 100vw;
+      z-index: 0;
+      z-index: 0;
+      --gradient-color-1: #283D59;
+      --gradient-color-2: #6ec3f4;
+      --gradient-color-3: #3F4F59;
+      --gradient-color-4: #263640;
+    }
+
+
     .g-t {
       background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
-    .card1 {
+
+    /* .card1 {
       grid-column: 3 / span 6;
       margin: 1rem;
-      color: #eeeeee ;
+      color: #eeeeee;
       background-color: #161E22;
-      box-shadow: 0 20px 30px rgba(0,0,0,0.2), 0 -10px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 -10px 20px rgba(0, 0, 0, 0.4);
       border-radius: 25px;
 
 
     }
+
     .card2 {
       grid-column: 10 / span 6;
       margin: 1rem;
-      color: #eeeeee ;
+      color: #eeeeee;
       background-color: #161E22;
-      box-shadow: 0 20px 30px rgba(0,0,0,0.2), 0 -10px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 -10px 20px rgba(0, 0, 0, 0.4);
       border-radius: 25px;
 
     }
+
     .card3 {
       grid-column: 17 / span 6;
       margin: 1rem;
-      color: #eeeeee ;
+      color: #eeeeee;
       background-color: #161E22;
-      box-shadow: 0 20px 30px rgba(0,0,0,0.2), 0 -10px 20px rgba(0,0,0,0.4);
-      border-radius: 25px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 -10px 20px rgba(0, 0, 0, 0.4);
+      border-radius: 25px; 
 
-    }
+    }*/
+
     figure {
-            display: grid;
-            border-radius: 1rem;
-            overflow: hidden;
-            cursor: pointer;
-          }
-          figure > * {
-            grid-area: 1/1;
-            transition: .4s;
-          }
-          figure figcaption {
-            display: grid;
-            align-items: end;
-            font-family: sans-serif;
-            font-size: 2.3rem;
-            font-weight: bold;
-            color: #0000;
-            padding: .75rem;
-            background: var(--c,#0009);
-            clip-path: inset(0 var(--_i,100%) 0 0);
-            -webkit-mask:
-              linear-gradient(#000 0 0),
-              linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor;
-            -webkit-mask-clip: text, padding-box;
-            margin: -1px;
-          }
-          figure:hover figcaption{
-            --_i: 0%;
-          }
-          figure:hover img {
-            transform: scale(1.2);
-          }
-          @supports not (-webkit-mask-clip: text) {
-            figure figcaption {
-             -webkit-mask: none;
-             color: #fff;
-            }
-          }
-   
+      display: grid;
+      /* border-radius: 0.7rem; */
+      overflow: hidden;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+    }
+
+    figure>* {
+      grid-area: 1/1;
+      transition: .4s;
+    }
+
+    figure figcaption {
+      display: grid;
+      align-items: end;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      padding: .75rem;
+      background: var(--c, rgba(0, 0, 0, 0.807));
+      clip-path: inset(0 var(--_i, 100%) 0 0);
+      -webkit-mask:
+        linear-gradient(#000 0 0),
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      -webkit-mask-clip: text;
+      margin: -1px;
+      transform: translateZ(100px);
+      padding: 0;
+    }
+
+    figure:hover figcaption {
+      --_i: 0%;
+      transform: translateZ(100px)
+    }
+
+    figure:hover img {
+      transform: scale(1.2);
+    }
+
+    @supports not (-webkit-mask-clip: text) {
+      figure figcaption {
+        -webkit-mask: none;
+        color: #fff;
+        transform: translateZ(100px)
+      }
+    }
+
     blockquote p {
       color: black;
       background-color: white;
@@ -170,187 +225,399 @@
 
     .left {
       grid-column: 5 / 25;
-      box-shadow: 0 20px 30px rgba(0,0,0,0.2), 0 -10px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 -10px 20px rgba(0, 0, 0, 0.4);
 
 
-    } 
-  .header-grid{
-    grid-column: 1 / 25;
-    margin: 0;
-            min-height: 100vh;
-            display: grid;
-            grid-auto-flow: column;
-            place-content: center;
-    
-  }
+    }
+
+    .header-grid {
+      grid-column: 1 / span 25;
+      margin: 0;
+      margin-top: 3rem;
+      /* grid-auto-flow: column; */
+      /* place-content: center; */
+      overflow: hidden;
+      /* Prevent scrollbars if gradient is larger than viewport */
+      /* display: flex; */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      grid-gap: 0;
+      padding: 0;
+
+    }
+
     img {
-      grid-column: 3 / 16;
+      /* grid-column: 3 / 16; */
       max-width: 100%;
       height: 20rem;
-      margin-bottom: var(--spacing);
+      /* margin-bottom: var(--spacing); */
     }
-    .leftimg{
+
+
+    .leftimg {
       grid-column: 6 / 12;
       padding: 1rem;
       max-width: 100%;
       height: auto;
       margin-bottom: var(--spacing);
     }
-@media only screen and (max-width: 576px) { /* Adjust breakpoint as needed */
-  div {
-  padding: 0px 0px;
+
+    .myheader {
+      grid-column: 1 / span 25;
+      /* backdrop-filter: blur(7px); */
+      /* margin-bottom: var(--spacing);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 -10px 20px rgba(0, 0, 0, 0.4);
+      background-color: rgba(255, 255, 255, 0.02);
+      border-radius: 2rem;
+      margin: 0.5rem; */
+
+
+
+
     }
-  header {
-    padding: 1rem;
-    font-size: 2rem;
-    grid-column: 1 / 25; /* Override for specific divs */
-  }
-  
-  section,
-  blockquote,
-  img,
-  .left,
-  .leftimg {
-    margin-bottom: 50px;
-    grid-column: 1 / 12; /* Override for specific divs */
-  }
 
-  
-}
-    
+    .thumbanail {
+      width: 450px;
+      position: relative;
+      /* box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+      background-color: #fff; */
+      overflow: hidden;
+      border-radius: 8px;
 
+      /* border-radius: 8px; */
+      /* margin-bottom: 10px; */
+    }
+
+    .thumbanail:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* border: 8px solid #fff; */
+      z-index: 2;
+      overflow: hidden;
+      /* box-sizing: border-box; */
+    }
+
+    .thumbanail img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transform: scale(1) rotate(0deg);
+      transition: all .5s linear;
+    }
+
+    .thumbanail:hover img {
+      transform: scale(1.1);
+    }
+
+
+    .thumbanail.right {
+      float: right;
+      margin-left: 20px;
+    }
+
+    .thumbanail.left {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .image-left,
+    .image-right {
+      /* margin: 1em 0; */
+      max-width: 220px;
+      height: auto;
+    }
+
+    @media only screen and (max-width: 576px) {
+
+      /* Adjust breakpoint as needed */
+      div {
+        padding: 0px 0px;
+      }
+
+      header {
+        padding: 1rem;
+        font-size: 2rem;
+        grid-column: 1 / 25;
+        /* Override for specific divs */
+      }
+
+      section,
+      blockquote,
+      img,
+      .left,
+      .leftimg {
+        margin-bottom: 50px;
+        grid-column: 1 / span 25;
+        /* Override for specific divs */
+      }
+
+      /* img {
+        grid-column: 3 / 16;
+        max-width: 100%;
+        height: 5rem;
+        margin-bottom: var(--spacing); 
+      } */
+
+
+    }
+
+    @media screen and (max-width:767px) {
+
+      .thumbanail.right {
+        float: none;
+        margin-left: 0px;
+      }
+
+      .thumbanail.left {
+        float: none;
+        margin-right: 0px;
+      }
+
+      .thumbanail {
+        width: 100%;
+      }
+    }
   </style>
-   <link rel="shortcut icon"  href="Untitled (1) (1).png">
+  <link rel="shortcut icon" href="Untitled (1) (1).png">
   <title>Cube Lab</title>
 
 </head>
 
 <body>
+  <canvas id="gradient-canvas" data-transition-in>
+  </canvas>
 
-<main>
+  <main id="main">
+
 
     <header>
       <h1> <img src="Untitled (1) (1).png"> Cube Lab</h1>
     </header>
-<!--   <div class="header-grid">
-  <figure  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
-    <img src="DALL·E 2024-2.webp" alt="Mountains">
-    <figcaption>The Day</figcaption>
-</figure>
-    
-<div class="card2"  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
-  <img src="DALL·E 2024-2.webp">
- Lorem ipsum 
-</div> -->
-
-<!-- 
-<div class="card3"  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
-   <img src="blendBoard.png">
-Lorem ipsum 
-</div>
-  
-  <div class="card1"  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
-    
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident
-</div>
-<div class="card2"  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-
-</div>
-
-
-<div class="card3"  data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
-    
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident
-</div>
-  </div> -->
-  
     <section>
       <h2>📜 Manifesto</h2>
 
-      <p>cube lab is a comprehensive IT solutions provider, dedicated to empowering businesses with innovative technology. Our diverse range of services caters to a wide spectrum of industries, including hospitality, retail, and automotive. We specialize in:
-      </p> <p> <h4> Website Development:</h4> Crafting visually appealing and user-friendly websites that effectively showcase your brand and drive online growth.</p>
-<p> <h4> iT Consulting:</h4> Providing expert advice and strategic guidance to optimize your IT infrastructure, enhance security, and boost productivity.</p>
-      <img src="blendBoard.png">
-<p> <h4> Automotive Software:</h4> Developing cutting-edge software solutions to streamline automotive operations, from inventory management to customer service.</p>
-<p>Hotel Management Systems: Implementing robust hotel management systems to streamline operations, improve guest experience, and maximize revenue.</p>
-<p> <h4>Point of Sale (POS) Systems:</h4> Offering efficient POS solutions to optimize sales processes, track inventory, and generate valuable business insights.</p>
-<p> <h4>Software Development and ERP Solutions:</h4> Tailoring software solutions and Enterprise Resource Planning systems to meet specific business needs, improving efficiency and decision-making.
-With a commitment to excellence and customer satisfaction, cube lab delivers innovative IT solutions that drive business success.</p>
-</p> </section>
 
-    
-       <section class="left">
-        
-سولوير هي شركة متخصصة في تقديم حلول تكنولوجيا المعلومات الشاملة، ملتزمة بتمكين الشركات من خلال التقنيات المبتكرة. تغطي مجموعة خدماتنا المتنوعة مجموعة واسعة من الصناعات، بما في ذلك الضيافة والتجزئة والسيارات. نحن متخصصون في:<p>
-تطوير مواقع الويب: صياغة مواقع ويب جذابة بصريًا وسهلة الاستخدام تعرض علامتك التجارية بشكل فعال وتعزز النمو عبر الإنترنت.<p></p>
-الاستشارات التقنية: تقديم المشورة والارشاد الاستراتيجي لتحسين البنية التحتية لتكنولوجيا المعلومات، وتعزيز الأمن، وزيادة الإنتاجية.<p> </p>
-برمجيات السيارات: تطوير حلول برمجية متطورة لترشيد العمليات السيارات، من إدارة المخزون إلى خدمة العملاء.<p></p>
-          <img src="DALL·E 2024-2.webp">
-نظم إدارة الفنادق: تنفيذ أنظمة إدارة فنادق قوية لترشيد العمليات، وتحسين تجربة الضيوف، وتعظيم الإيرادات.<p>  </p>
- تقديم حلول نقاط البيع: الفعالة لتحسين عمليات البيع وتتبع المخزون وتوليد رؤى تجارية قيمة. نظم نقاط البيع (POS)<p> </p>
- تصميم حلول برمجية وأنظمة تخطيط موارد المؤسسة:  لتلبية الاحتياجات التجارية المحددة، وتحسين الكفاءة واتخاذ القرارات طوير البرمجيات وحلول تخطيط موارد المؤسسة (ERP):<p></p>
-</p> مع التزامنا بالتميز ورضا العملاء، توفر سولوير حلول تكنولوجيا المعلومات المبتكرة التي تدفع النجاح التجاري.
+      <p>cube lab is a comprehensive IT solutions provider, dedicated to empowering businesses with innovative
+        technology. Our diverse range of services caters to a wide spectrum of industries, including hospitality,
+        retail, and automotive. We specialize in:
+      </p>
+      <p>
+        و هي شركة متخصصة في تقديم حلول تكنولوجيا المعلومات الشاملة، ملتزمة بتمكين الشركات من خلال التقنيات
+        المبتكرة.
+        تغطي مجموعة خدماتنا المتنوعة مجموعة واسعة من الصناعات، بما في ذلك الضيافة والتجزئة والسيارات. نحن متخصصون في:
+      </p>
+    </section>
+    <!-- <div class="myheader">
+      <div class="header-grid">
 
- 
-    </section> 
+        <figure data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.1">
+          <img src="pexels-imin-technology-276315592-12935041.jpg" alt="Mountains">
+          <figcaption>pos installtions </figcaption>
+        </figure>
+
+        <figure data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.1">
+          <img src="pexels-kevin-ku-92347-577585.jpg" alt="Mountains">
+          <figcaption>IT Consulting </figcaption>
+        </figure>
+
+        <figure data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.1">
+          <img src="blendBoard.png" alt="Mountains">
+          <figcaption>ERP confugration </figcaption>
+        </figure>
+
+        <figure data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.1">
+          <img src="blendBoard.png" alt="Mountains">
+          <figcaption>pos installtions </figcaption>
+        </figure>
+
+        <figure data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.1">
+          <img src="website development-min.webp" alt="Mountains">
+          <figcaption>IT Consulting </figcaption>
+        </figure>
+
+        <figure data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.1">
+          <img src="blendBoard.png" alt="Mountains">
+          <figcaption>ERP confugration </figcaption>
+        </figure>
+
+      </div>
+
+    </div> -->
     <section>
-      <P>
-        
-cube lab is your ultimate partner in leveraging the power of Artificial Intelligence to revolutionize your business productivity. Our cutting-edge AI services are designed to streamline operations,
-        enhance decision-making, and unlock new levels of efficiency for your company. Whether you're looking to automate repetitive tasks, gain actionable insights from big data, or improve customer experiences,
-        cube lab provides tailor-made solutions to meet your specific needs.
+      <div class="thumbanail left">
+        <img src="pexels-kevin-ku-92347-577585.jpg" alt="Text with image example">
+      </div>
+      <p>
+      <h4> Website Development:</h4> Crafting visually appealing and user-friendly websites that effectively showcase
+      your brand and drive online growth.</p>
+      <p>
+        تطوير مواقع الويب: صياغة مواقع ويب جذابة بصريًا وسهلة الاستخدام تعرض علامتك التجارية بشكل فعال وتعزز النمو عبر
+        الإنترنت.
+      </p>
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
 
-With a team of AI experts and a deep understanding of modern business challenges, we offer services like predictive analytics, natural language processing, intelligent automation, and customized AI tools.
-        Our mission is to empower businesses to stay ahead in a competitive market by integrating innovative technology into their workflows seamlessly. 
-        At cube lab, we don’t just provide AI solutions; we deliver measurable results that drive growth and success for your organization.</P>
-      </section>
-      <section class="left"> <P>
-        
-        سولوير هي شريكك المثالي لاستغلال قوة الذكاء الاصطناعي لإحداث ثورة في إنتاجية أعمالك. نحن نقدم خدمات ذكاء اصطناعي متطورة مصممة لتبسيط العمليات،
-        وتعزيز اتخاذ القرارات، وفتح آفاق جديدة من الكفاءة لشركتك. سواء كنت تسعى لأتمتة المهام المتكررة، أو استخراج رؤى قابلة للتنفيذ من البيانات الضخمة، أو تحسين تجارب العملاء، فإن سولوير تقدم حلولًا مصممة خصيصًا لتلبية احتياجاتك.
-
-بفضل فريق من خبراء الذكاء الاصطناعي وفهم عميق لتحديات الأعمال الحديثة، نقدم خدمات مثل التحليلات التنبؤية، ومعالجة اللغة الطبيعية، والأتمتة الذكية،
-        وأدوات الذكاء الاصطناعي المخصصة. رسالتنا هي تمكين الشركات من التقدم في سوق تنافسية من خلال دمج التكنولوجيا المبتكرة في سير العمل بسلاسة. في سولوير، لا نقدم حلول ذكاء اصطناعي فحسب، بل نقدم نتائج قابلة للقياس تدفع نمو ونجاح مؤسستك. 
-      </P>
+      </p>
 
     </section>
-   
+    <section class="left">
+      <div class="thumbanail left">
+        <img src="pexels-thirdman-7984739.jpg" alt="Text with image example">
+      </div>
+      <p>
+      <h4> iT Consulting:</h4> Providing expert advice and strategic guidance to optimize your IT infrastructure,
+      enhance security, and boost productivity.</p>
+      <p>
+        الاستشارات التقنية: تقديم المشورة والارشاد الاستراتيجي لتحسين البنية التحتية لتكنولوجيا المعلومات، وتعزيز الأمن،
+        وزيادة الإنتاجية. </p>
+      <p>
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
 
-    <section class="light"  >
+      </p>
+    </section>
+    <section>
+      <div class="thumbanail left">
+        <img src="pexels-gustavo-fring-6720502.jpg" alt="Text with image example">
+      </div>
+      <h4> Automotive Software:</h4> Developing cutting-edge software solutions to streamline automotive operations,
+      from inventory management to customer service.</p>
+
+      <p>
+        برمجيات السيارات: تطوير حلول برمجية متطورة لترشيد العمليات السيارات، من إدارة المخزون إلى خدمة العملاء.</p>
+
+
+
+      <p>
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
+
+      </p>
+    </section>
+
+    <section class="left">
+      <div class="thumbanail left">
+        <img src="pexels-rdne-4921260.jpg" alt="Text with image example">
+      </div>
+      <h4>Point of Sale (POS) Systems:</h4> Offering efficient POS solutions to optimize sales processes, track
+      inventory, and generate valuable business insights.</p>
+      <p>
+        تقديم حلول نقاط البيع: الفعالة لتحسين عمليات البيع وتتبع المخزون وتوليد رؤى تجارية قيمة. نظم نقاط البيع (POS)
+      <p>
+      </p>
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
+
+      </p>
+    </section>
+    <section>
+      <div class="thumbanail left">
+        <img src="hero_image.png" alt="Text with image example">
+      </div>
+      <h4>Software Development and ERP Solutions:</h4> Tailoring software solutions and Enterprise Resource Planning
+      systems to meet specific business needs, improving efficiency and decision-making.
+      With a commitment to excellence and customer satisfaction, cube lab delivers innovative IT solutions that drive
+      business success.</p>
+      </p>
+      تصميم حلول برمجية وأنظمة تخطيط موارد المؤسسة: لتلبية الاحتياجات التجارية المحددة، وتحسين الكفاءة واتخاذ القرارات
+      طوير البرمجيات وحلول تخطيط موارد المؤسسة (ERP):<p></p>
+      </p> مع التزامنا بالتميز ورضا العملاء، توفر سولوير حلول تكنولوجيا المعلومات المبتكرة التي تدفع النجاح التجاري.
+
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
+
+      </p>
+    </section>
+
+
+    <section class="left">
+      <div class="thumbanail left">
+        <img src="1703844591.jpg" alt="Text with image example">
+      </div>
+
+      <p>Hotel Management Systems: Implementing robust hotel management systems to streamline operations, improve
+        guest
+        experience, and maximize revenue.</p>
+      نظم إدارة الفنادق: تنفيذ أنظمة إدارة فنادق قوية لترشيد العمليات، وتحسين تجربة الضيوف، وتعظيم الإيرادات.<p> </p>
+
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
+
+      </p>
+    </section>
+    <section>
+      <div class="thumbanail left">
+        <img src="pexels-bertellifotografia-30530416.jpg" alt="Text with image example">
+      </div>
+      <P>
+
+        cube lab is your ultimate partner in leveraging the power of Artificial Intelligence to revolutionize your
+        business productivity. Our cutting-edge AI services are designed to streamline operations,
+        enhance decision-making, and unlock new levels of efficiency for your company. Whether you're looking to
+        automate repetitive tasks, gain actionable insights from big data, or improve customer experiences,
+        cube lab provides tailor-made solutions to meet your specific needs.
+
+        With a team of AI experts and a deep understanding of modern business challenges, we offer services like
+        predictive analytics, natural language processing, intelligent automation, and customized AI tools.
+        Our mission is to empower businesses to stay ahead in a competitive market by integrating innovative
+        technology
+        into their workflows seamlessly.
+        At cube lab, we don’t just provide AI solutions; we deliver measurable results that drive growth and success
+        for
+        your organization.</P>
+
+      <P>
+
+        سولوير هي شريكك المثالي لاستغلال قوة الذكاء الاصطناعي لإحداث ثورة في إنتاجية أعمالك. نحن نقدم خدمات ذكاء
+        اصطناعي
+        متطورة مصممة لتبسيط العمليات،
+        وتعزيز اتخاذ القرارات، وفتح آفاق جديدة من الكفاءة لشركتك. سواء كنت تسعى لأتمتة المهام المتكررة، أو استخراج رؤى
+        قابلة للتنفيذ من البيانات الضخمة، أو تحسين تجارب العملاء، فإن سولوير تقدم حلولًا مصممة خصيصًا لتلبية
+        احتياجاتك.
+
+        بفضل فريق من خبراء الذكاء الاصطناعي وفهم عميق لتحديات الأعمال الحديثة، نقدم خدمات مثل التحليلات التنبؤية،
+        ومعالجة اللغة الطبيعية، والأتمتة الذكية،
+        وأدوات الذكاء الاصطناعي المخصصة. رسالتنا هي تمكين الشركات من التقدم في سوق تنافسية من خلال دمج التكنولوجيا
+        المبتكرة في سير العمل بسلاسة. في سولوير، لا نقدم حلول ذكاء اصطناعي فحسب، بل نقدم نتائج قابلة للقياس تدفع نمو
+        ونجاح مؤسستك.
+      </P>
+      <p> Contact US : <a class="wa" href="https://wa.me/">Whatsapp</a> -
+        <a class="gm" href="mailto:cubelab.co@gmail.com?subject=The%20subject%20of%20the%20mail ">Email</a>
+
+      </p>
+    </section>
+
+
+
+
+    <section class="light">
       <h2> 💻 Projects</h2>
 
-      <p>  <br> <a href="https://github.com/mohamedbadrco/photo-hash">Photo Hash</a>  Fultter, Dart 
-Application using Flutter and Dart that generates ASCII art representations of images User uploads an image
-or selects one from the device. The application processes the image and converts it into ASCII art format.
-Users can customize the level of detail ,colors and style in the generated art that work on android ,Linux and
-web.
-        
-<br> <a href="https://github.com/mohamedbadrco/goim">G Hash</a> go-lang
-Conceptualized and developed a NFT project using Golang that generates unique, code-driven ASCII art
-GIFs. This project merges the artistic realm of ASCII art with the innovative world of NFTs. I leveraged
-Golang's powerful capabilities for generating dynamic ASCII art to create a collection of programmatically
-produced, animated NFTs.
-        
-<br> <a href="https://github.com/mohamedbadrco/twebot">Twitter-bot</a>  python 
-Developed and deployed a Twitter bot using Python, Tweepy this bot leverages my skills in automation and
-social media to increase brand awareness, provide valuable content to followers, foster community engagement
+      <p> <br> <a href="https://github.com/mohamedbadrco/photo-hash">Photo Hash</a> Fultter, Dart
+        Application using Flutter and Dart that generates ASCII art representations of images User uploads an image
+        or selects one from the device. The application processes the image and converts it into ASCII art format.
+        Users can customize the level of detail ,colors and style in the generated art that work on android ,Linux and
+        web.
 
- <br> <a href="https://mohamedbadrco.github.io/">Portfolio page</a>  HTML, CSS, JavaScript 
-Leveraging the power of HTML, CSS, and JavaScript, I've crafted a dynamic 3D portfolio website that
-showcases my professional journey. This interactive experience presents my skills, experience, and projects in
-a visually engaging format, making a lasting impression on potential employers.
+        <br> <a href="https://github.com/mohamedbadrco/goim">G Hash</a> go-lang
+        Conceptualized and developed a NFT project using Golang that generates unique, code-driven ASCII art
+        GIFs. This project merges the artistic realm of ASCII art with the innovative world of NFTs. I leveraged
+        Golang's powerful capabilities for generating dynamic ASCII art to create a collection of programmatically
+        produced, animated NFTs.
+
+        <br> <a href="https://github.com/mohamedbadrco/twebot">Twitter-bot</a> python
+        Developed and deployed a Twitter bot using Python, Tweepy this bot leverages my skills in automation and
+        social media to increase brand awareness, provide valuable content to followers, foster community engagement
+
+        <br> <a href="https://mohamedbadrco.github.io/">Portfolio page</a> HTML, CSS, JavaScript
+        Leveraging the power of HTML, CSS, and JavaScript, I've crafted a dynamic 3D portfolio website that
+        showcases my professional journey. This interactive experience presents my skills, experience, and projects in
+        a visually engaging format, making a lasting impression on potential employers.
 
 
     </section>
@@ -366,13 +633,41 @@ a visually engaging format, making a lasting impression on potential employers.
       <P>cube lab@gmail.com</P>
       <p> +96897272069 </p>
       <p> location: Muscat, seeb </p>
-
-
     </section>
   </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/lib/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/lib/vanilla-tilt.min.js"></script>
+  <script src="Gradient.js"></script>
+  <script>
+    // Create your instance
+    const gradient = new Gradient()
+
+    // Call `initGradient` with the selector to your canvas
+    gradient.initGradient('#gradient-canvas')
+
+    const element = document.getElementById("main");
+    const rect = element.getBoundingClientRect();
+    var grad = document.getElementById('gradient-canvas');
+    grad.style.height = rect.height + "px";
+    const mediaQuery = window.matchMedia('(max-width: 576px)');
+    if (mediaQuery.matches) {
+      grad.style.height = (rect.height * 1.1 + 50) + "px";
+    }
+    window.addEventListener('resize', function () {
+      const element = document.getElementById("main");
+      const rect = element.getBoundingClientRect();
+      var grad = document.getElementById('gradient-canvas');
+      grad.style.height = rect.height + "px";
+      const mediaQuery = window.matchMedia('(max-width: 576px)');
+      if (mediaQuery.matches) {
+        grad.style.height = (rect.height * 1.1 + 50) + "px";
+      }
+
+    });
+    // console.log("Height: " + rect.height + "px");
+  </script>
+
 
 
 </body>

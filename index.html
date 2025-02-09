@@ -620,7 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
       grad.style.height = rect.height + "px";
       const mediaQuery = window.matchMedia('(max-width: 576px)');
       if (mediaQuery.matches) {
-        grad.style.height = (rect.height * 1.1 + 50) + "px";
+        grad.style.height = (rect.height) + "px";
         console.log("Height: " + (rect.height * 1.1 + 50) + "px");
       }
       window.addEventListener('resize', function () {
@@ -630,7 +630,7 @@ document.addEventListener("DOMContentLoaded", function () {
         grad.style.height = rect.height + "px";
         const mediaQuery = window.matchMedia('(max-width: 576px)');
         if (mediaQuery.matches) {
-          grad.style.height = (rect.height * 1.1 + 50) + "px";
+          grad.style.height = (rect.height) + "px";
         }
         console.log("Height: " + (rect.height * 1.1 + 50) + "px");
       });
